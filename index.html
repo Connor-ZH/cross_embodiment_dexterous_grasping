@@ -56,8 +56,8 @@
   <title>Cross-Embodiment Dexterous Hand Articulation Generation via Morphology-Aware Learning – Zhang, Ma, Shou, Lin, Wu | Academic Research</title>
 
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
-  <link rel="apple-touch-icon" href="static/images/favicon.png">
+<!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">-->
+<!--  <link rel="apple-touch-icon" href="static/images/favicon.png">-->
 
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -121,7 +121,6 @@
     "@type": "Organization",
     "name": "INSTITUTION_OR_LAB_NAME",
     "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
     "sameAs": [
       "https://twitter.com/YOUR_TWITTER_HANDLE",
       "https://github.com/YOUR_GITHUB_USERNAME"
@@ -344,25 +343,197 @@ Our framework processes hand URDF, object point cloud, and wrist pose through sp
 <!--      </div>-->
 <!--    </section>-->
 
-    <!-- Video carousel -->
+<section class="hero is-small" style="background-color:#f7f7f7; padding: 3rem 0;">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="text-align:center; margin-bottom: 2rem;">
+        Real World Demos
+      </h2>
+
+      <div class="video-grid">
+        <video src="static/videos/bowl.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="static/videos/chips_can.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="static/videos/herb.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="static/videos/ketchup.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="static/videos/mug.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="static/videos/rugby.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="static/videos/salt_box.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="static/videos/soup_can.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="static/videos/spam.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="static/videos/paper.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* controls number per row */
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+.video-grid video {
+  width: 100%;
+  max-width: 260px; /* adjust to control video size */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle hover effect for professionalism */
+.video-grid video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  .video-grid video {
+    max-width: 180px;
+  }
+}
+</style>
+
+      <section class="hero is-small" style="background-color:#ffffff; padding: 3rem 0;">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="text-align:center; margin-bottom: 2rem;">
+        Real World Experiment Results
+      </h2>
+
+      <div class="table-container">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Object</th>
+              <th>Success/Trials</th>
+              <th>Success Rate (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Bowl</td><td>7/10</td><td>70</td></tr>
+            <tr><td>Chips Can</td><td>9/10</td><td>90</td></tr>
+            <tr><td>Spice Can</td><td>9/10</td><td>90</td></tr>
+            <tr><td>Ketchup Bottle</td><td>9/10</td><td>90</td></tr>
+            <tr><td>Mug</td><td>8/10</td><td>80</td></tr>
+            <tr><td>Rugby Ball</td><td>10/10</td><td>100</td></tr>
+            <tr><td>Salt Box</td><td>8/10</td><td>80</td></tr>
+            <tr><td>Tomato Soup Can</td><td>8/10</td><td>80</td></tr>
+            <tr><td>Spam Can</td><td>9/10</td><td>90</td></tr>
+            <tr><td>Paper Roll</td><td>10/10</td><td>100</td></tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Average</th>
+              <th>-</th>
+              <th style="color:#2b9348;">87</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.results-table {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.results-table thead {
+  background-color: #bcd2e8;
+  font-weight: bold;
+}
+
+.results-table th, .results-table td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #d9e2ec;
+}
+
+.results-table tbody tr:nth-child(even) {
+  background-color: #f1f5fa;
+}
+
+.results-table tfoot {
+  background-color: #e8eef7;
+  font-weight: bold;
+}
+
+.results-table tfoot th {
+  border-top: 2px solid #d9e2ec;
+}
+</style>
+
+
+<!--     Video carousel-->
 <!--    <section class="hero is-small">-->
 <!--      <div class="hero-body">-->
 <!--        <div class="container">-->
 <!--          <h2 class="title is-3">More Videos</h2>-->
 <!--          <div id="results-carousel-videos" class="carousel results-carousel" aria-label="Video results carousel">-->
 <!--            <div class="item item-video1">-->
-<!--              <video poster="static/images/video1_poster.jpg" id="video1" controls muted loop height="100%" preload="metadata">-->
-<!--                <source src="static/videos/carousel1.mp4" type="video/mp4">-->
+<!--              <video poster=id="video1" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/bowl.mp4" type="video/mp4">-->
 <!--              </video>-->
 <!--            </div>-->
 <!--            <div class="item item-video2">-->
-<!--              <video poster="static/images/video2_poster.jpg" id="video2" controls muted loop height="100%" preload="metadata">-->
-<!--                <source src="static/videos/carousel2.mp4" type="video/mp4">-->
+<!--              <video id="video2" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/chips_can.mp4" type="video/mp4">-->
 <!--              </video>-->
 <!--            </div>-->
 <!--            <div class="item item-video3">-->
-<!--              <video poster="static/images/video3_poster.jpg" id="video3" controls muted loop height="100%" preload="metadata">-->
-<!--                <source src="static/videos/carousel3.mp4" type="video/mp4">-->
+<!--              <video  id="video3" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/herb.mp4" type="video/mp4">-->
+<!--              </video>-->
+<!--            </div>-->
+<!--                          <div class="item item-video4">-->
+<!--              <video  id="video4" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/ketchup.mp4" type="video/mp4">-->
+<!--              </video>-->
+<!--            </div>-->
+<!--                          <div class="item item-video5">-->
+<!--              <video  id="video5" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/mug.mp4" type="video/mp4">-->
+<!--              </video>-->
+<!--            </div>-->
+<!--                          <div class="item item-video6">-->
+<!--              <video  id="video6" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/rugby.mp4" type="video/mp4">-->
+<!--              </video>-->
+<!--            </div>-->
+<!--     <div class="item item-video7">-->
+<!--              <video id="video7" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/salt_box.mp4" type="video/mp4">-->
+<!--              </video>-->
+<!--            </div>-->
+<!--                   <div class="item item-video8">-->
+<!--              <video  id="video8" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/soup_can.mp4" type="video/mp4">-->
+<!--              </video>-->
+<!--            </div>-->
+<!--                   <div class="item item-video9">-->
+<!--              <video   id="video9" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/spam.mp4" type="video/mp4">-->
+<!--              </video>-->
+<!--            </div>-->
+<!--                   <div class="item item-video10">-->
+<!--              <video  id="video10" controls muted loop height="100%" preload="metadata">-->
+<!--                <source src="static/videos/paper.mp4" type="video/mp4">-->
 <!--              </video>-->
 <!--            </div>-->
 <!--          </div>-->
