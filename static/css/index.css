@@ -151,16 +151,16 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.publication-venue {
-    color: var(--text-secondary);
-    width: fit-content;
-    font-weight: 600;
-    background: var(--background-accent);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    margin-top: 1rem;
-    display: inline-block;
+.publication-venue{
+  width: 100%;
+  text-align: center;
+  margin-top: 0.9rem;
 }
+
+.accept-badge{
+  display: inline-flex; /* keep this so the dot aligns nicely */
+}
+
 
 .publication-awards {
     color: #ef4444;
@@ -748,6 +748,42 @@ a:focus {
     box-shadow: none !important;
   }
 }
+
+.publication-venue{
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: center;
+}
+
+.accept-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  padding: 0.55rem 1.05rem;
+  border-radius: 999px;
+
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+
+  color: #0b5cab;
+  background: linear-gradient(180deg, #f3f9ff 0%, #e7f2ff 100%);
+  border: 1px solid rgba(11, 92, 171, 0.18);
+
+  box-shadow:
+    0 8px 22px rgba(16, 24, 40, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+.accept-badge__dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #22c55e;              /* “accepted” green */
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18);
+}
+
 
 
 
